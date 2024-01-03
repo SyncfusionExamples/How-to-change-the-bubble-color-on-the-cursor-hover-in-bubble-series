@@ -1,24 +1,25 @@
 # How-to-change-the-bubble-color-on-the-cursor-hover-in-bubble-series
 
-This article explains how to change the bubble color on the cursor hover in Blazor chart component.
+This article explains how to change the bubble color on the cursor hover in Blazor Chart Component.
 
-**Highlighting bubble point on mouse hover**
+**Highlighting the bubble point on mouse hover**
 
-[Blazor Chart](https://www.syncfusion.com/blazor-components/blazor-charts) provides support to change color of the Bubble points on mouse hover by using highlight color and highlight mode property.
+[Blazor Chart](https://www.syncfusion.com/blazor-components/blazor-charts) provides support to change color of the Bubble points on mouse hover by using [HighLightColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_HighlightColor) and [HighLightMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_HighlightMode) property.
 
 The color which needs to be changes is set to the [HighLightColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_HighlightColor) property and the [HighLightMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_HighlightMode) is set to **Point**.
 
-The following code snippet illustrates this.
+The following code example demonstrates this.
 
-**C#**
+**Index.razor**
 
 ```cshtml
 
 @using Syncfusion.Blazor.Charts
 
 <SfChart HighlightColor="red" HighlightMode="HighlightMode.Point">
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
     <ChartSeriesCollection>
-        <ChartSeries DataSource="@SalesReports" XName="X" YName="Y" Type="ChartSeriesType.Bubble">
+        <ChartSeries DataSource="@SalesReports" XName="Text" YName="Y" Type="ChartSeriesType.Bubble" Size="Y">
         </ChartSeries>
     </ChartSeriesCollection>
 </SfChart>
@@ -57,11 +58,11 @@ The following code snippet illustrates this.
 
 ```
 
-The following image screenshot illustrate this.
+The following screenshot illustrates the output of the above code snippet.
 
 **Output:**
 
-![](/bubble-point-color-change-on-hover.png)
+![](/bubble-point-color-change-on-hover.gif)
 
 **Conclusion**
 

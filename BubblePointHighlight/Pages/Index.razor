@@ -2,8 +2,9 @@
 @using Syncfusion.Blazor.Charts
 
 <SfChart HighlightColor="red" HighlightMode="HighlightMode.Point">
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
     <ChartSeriesCollection>
-        <ChartSeries DataSource="@SalesReports" XName="X" YName="Y" Type="ChartSeriesType.Bubble">
+        <ChartSeries DataSource="@SalesReports" XName="Text" YName="Y" Type="ChartSeriesType.Bubble" Size="Y">
         </ChartSeries>
     </ChartSeriesCollection>
 </SfChart>
